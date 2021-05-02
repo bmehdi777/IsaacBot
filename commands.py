@@ -36,12 +36,14 @@ class PersonnalCommands:
         @self.bot.command(name="isaac", pass_context=True)
         async def func(ctx, arg):
             if arg != "help":
+                found = False
                 for i in self.cmd:
                     if arg == i:
+                        found = True
                         await self.readSound(ctx, self.cmd[i])
-                    else:
-                        await ctx.channel.send("This sound doesn't exist...")
-            else if arg == "help":
+                if not found:
+                    await ctx.channel.send("This sound doesn't exist...")
+            elif arg == "help":
                 resp = "You can use the bot by typing : **!isaac** *<sound>* \nHere is the list of sound : \n\n"
                 for i in self.cmd:
                     resp += "- *" + i + "*" + "\n"
