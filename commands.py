@@ -13,7 +13,8 @@ class PersonnalCommands:
                     "badTrip": "./sound/bad trip 1.mp3",
                     "ballsOfSteel": "./sound/balls of steel 4.mp3",
                     "excited": "./sound/excited 1.mp3",
-                    "diahhrea": "./sound/explosive diahhrea 2.mp3"}
+                    "diahhrea": "./sound/explosive diahhrea 2.mp3",
+                    "HUS":"./sound/HUUUUS.mp3"}
 
     async def readSound(self, ctx, soundPath):
         channel = ctx.message.author.voice.channel
